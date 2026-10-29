@@ -3,24 +3,60 @@
     background-color: rgb(0, 88, 177);
     color: white;
     overflow: auto;
-    position: sticky;
-    top: 0;
+    position: sticky;   
     display: flex;
-    align-items: center; 
-    gap: 10%; 
+    align-items: center;  
+    margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box; 
+    gap: 20px; 
 }
+
+#mailTop h1 {
+    margin: 0; 
+}
+
 #search {
     width: 25%;
     background-color: rgb(234, 234, 234);
     color: rgba(0, 0, 0, 0.5);
-    border-color: rgba(0,0,0,0.5);
     border-radius: 2px;
-    border: 1px solid;
+    border: 1px solid rgba(0,0,0,0.5);
     display: flex;
     align-items: center; 
     gap: 15px; 
+    padding: 0 10px;
+    margin-left: 5%;
 }
-#search img {
-    height:25px;
 
+#search img {
+    height: 25px;
+}
+
+#mailTop img {
+    height: 40px;
+}
+
+.push-right {
+    margin-left: auto;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    margin: 0;
 }
