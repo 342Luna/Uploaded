@@ -7,32 +7,82 @@
     <link rel="stylesheet" href="UploadedMain.CSS">
 </head>
 <body>
+    <!-- TOP NAVIGATION BAR -->
     <div id="mailTop">
         <h1>3Mail</h1>
         
         <div id="search">
-            <img src="Pictures/1800204.png">
+            <img src="Pictures/1800204.png" alt="Search icon">
             <p>Search</p>
         </div>
 
-        <!-- .push-right moves this and all following items to the right side -->
-        <img src="Pictures/notification-bell-ring.png" class="push-right">
-        
-        <img src="Pictures/settings-logo.png">
+        <!-- Utility class to push everything after this to the right -->
+        <img src="Pictures/notification-bell-ring.png" class="push-right top-icon" alt="Notifications">
+        <img src="Pictures/settings-logo.png" class="top-icon" alt="Settings">
         
         <div class="profile-pic">
-            <img src="Pictures/cat.png">
+            <img src="Pictures/cat.png" alt="Profile">
         </div>
     </div>
-    <div id="mailList">
-        <div id="Today">
 
+    <!-- MAIN BODY CONTAINER -->
+    <div id="mailBody">
+        <!-- SIDEBAR MAIL LIST -->
+        <div id="mailList">
+            <!-- TODAY SECTION -->
+            <div id="Today">
+                <div class="mailListTitles"><h3>Today</h3></div>
+                
+                <div class="mailItem unread">
+                    <div class="mailHeader">
+                        <p class="sender">GitHub</p>
+                        <span class="time">10:42 AM</span>
+                    </div>
+                    <p class="subject">Security alert for your repository</p>
+                    <p class="preview">We detected a potential issue in your latest commit...</p>
+                </div>
+
+                <div class="mailItem">
+                    <div class="mailHeader">
+                        <p class="sender">Alex Rivera</p>
+                        <span class="time">8:15 AM</span>
+                    </div>
+                    <p class="subject">Project Update & Notes</p>
+                    <p class="preview">Hey, I took a look at the layout changes and they look great!</p>
+                </div>
+            </div>
+
+            <!-- YESTERDAY SECTION -->
+            <div id="Yesterday">
+                <div class="mailListTitles"><h3>Yesterday</h3></div>
+                
+                <div class="mailItem">
+                    <div class="mailHeader">
+                        <p class="sender">Support Team</p>
+                        <span class="time">4:30 PM</span>
+                    </div>
+                    <p class="subject">Your ticket #4029 has been updated</p>
+                    <p class="preview">Thank you for reaching out. We have resolved the issue...</p>
+                </div>
+            </div>
+
+            <!-- OLDER SECTION -->
+            <div id="Older">
+                <div class="mailListTitles"><h3>Older</h3></div>
+                
+                <div class="mailItem">
+                    <div class="mailHeader">
+                        <p class="sender">Weekly Newsletter</p>
+                        <span class="time">Oct 24</span>
+                    </div>
+                    <p class="subject">Top Tech Stories This Week</p>
+                    <p class="preview">Here is your weekly round-up of the best developer news...</p>
+                </div>
+            </div>
         </div>
-        <div id="Yesterday">
 
-        </div>
-        <div id="Older">
-
+        <div id="mailView">
+            <p style="color: #666; font-family: Arial, sans-serif;">Select an email to read</p>
         </div>
     </div>
 </body>
