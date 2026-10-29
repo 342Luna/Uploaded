@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uploaded</title>
     <link rel="stylesheet" href="UploadedMain.CSS">
+    <script src="UploadedMain.JS" defer></script>
 </head>
 <body>
     <!-- TOP NAVIGATION BAR -->
@@ -34,7 +35,7 @@
                 <div class="mailListTitles"><h3>Today</h3></div>
 
                 <!----------------------------------------------------->
-                <div class="mailItem unread" title="There is a new game! Intrested? Click HERE to download!">
+                <div data-mail-id="1" class="mailItem unread" title="There is a new game! Intrested? Click HERE to download!">
                     <div class="mailHeader">
                         <p class="sender">yourGameDownloader</p>
                         <span class="time">11:47 AM</span>
@@ -44,7 +45,7 @@
                 </div>
 
                 <!----------------------------------------------------->
-                <div class="mailItem unread" title="We detected a potential issue in your latest commit...">
+                <div data-mail-id="2" class="mailItem unread" title="We detected a potential issue in your latest commit...">
                     <div class="mailHeader">
                         <p class="sender">GitHub</p>
                         <span class="time">10:42 AM</span>
@@ -54,7 +55,7 @@
                 </div>
 
                 <!----------------------------------------------------->
-                <div class="mailItem" title="Hey, I took a look at the layout changes and they look great!">
+                <div data-mail-id="3" class="mailItem" title="Hey, I took a look at the layout changes and they look great!">
                     <div class="mailHeader">
                         <p class="sender">Alex Rivera</p>
                         <span class="time">8:15 AM</span>
@@ -69,7 +70,7 @@
                 <div class="mailListTitles"><h3>Yesterday</h3></div>
                 
                 <!----------------------------------------------------->
-                <div class="mailItem unread" title="Thank you for reaching out. We have resolved the issue...">
+                <div data-mail-id="4" class="mailItem unread" title="Thank you for reaching out. We have resolved the issue...">
                     <div class="mailHeader">
                         <p class="sender">Support Team</p>
                         <span class="time">4:30 PM</span>
@@ -84,7 +85,7 @@
                 <div class="mailListTitles"><h3>Older</h3></div>
                 
                 <!----------------------------------------------------->
-                <div class="mailItem" title="Here is your weekly round-up of the best developer news...">
+                <div data-mail-id="5" class="mailItem" title="Here is your weekly round-up of the best developer news...">
                     <div class="mailHeader">
                         <p class="sender">Weekly Newsletter</p>
                         <span class="time">Oct 24</span>
@@ -94,7 +95,7 @@
                 </div>
                 
                 <!----------------------------------------------------->
-                <div class="mailItem" >
+                <div data-mail-id="6" class="mailItem" >
                     <div class="mailHeader">
                         <p class="sender">Pinter@st</p>
                         <span class="time">Oct 25</span>
@@ -104,7 +105,7 @@
                 </div>
                 
                 <!----------------------------------------------------->
-                <div class="mailItem" title="It's been a year since the deadline. A year">
+                <div data-mail-id="7" class="mailItem" title="It's been a year since the deadline. A year">
                     <div class="mailHeader">
                         <p class="sender">Your Library</p>
                         <span class="time">Oct 16</span>
@@ -114,7 +115,7 @@
                 </div>
                 
                 <!----------------------------------------------------->
-                <div class="mailItem" title="Tommorow it will be a year since the deadline. Should we celebrate?">
+                <div data-mail-id="8" class="mailItem" title="Tommorow it will be a year since the deadline. Should we celebrate?">
                     <div class="mailHeader">
                         <p class="sender">Your Library</p>
                         <span class="time">Oct 15</span>
@@ -122,11 +123,21 @@
                     <p class="subject">Anniversary</p>
                     <p class="preview">Tommorow it will be a year since the deadline. Should we celebrate?</p>
                 </div>
+
+                <!----------------------------------------------------->
+                <div data-mail-id="9" class="mailItem unread" title="You still haven't cleaned your room. It's a mess.">
+                    <div class="mailHeader">
+                        <p class="sender">Mother</p>
+                        <span class="time">Oct 10</span>
+                    </div >
+                    <p class="subject">CLEAN YOUR ROOM</p>
+                    <p class="preview">You still haven't cleaned your room. It's a mess.</p>
+                </div>
             </div>
         </div>
 
         <div id="mailView">
-            <p style="color: #666; font-family: Arial, sans-serif;">Select an email to read</p>
+            <div></div>
         </div>
     </div>
 </body>
