@@ -11,18 +11,18 @@
     <!-- TOP NAVIGATION BAR -->
     <div id="mailTop">
         <h1>3Mail</h1>
-        
+        <p></p>
         <div id="search" title="HAHA! GET FOOLED!">
             <img src="Pictures/1800204.png" alt="Search icon">
             <p>Search</p>
         </div>
 
         <!-- Utility class to push everything after this to the right -->
-        <img src="Pictures/notification-bell-ring.png" class="push-right top-icon" alt="Notifications">
-        <img src="Pictures/settings-logo.png" class="top-icon" alt="Settings">
+        <img title="No notifications" src="Pictures/notification-bell-ring.png" class="push-right top-icon" alt="Notifications">
+        <img title="There is no settings :D" src="Pictures/settings-logo.png" class="top-icon" alt="Settings">
         
         <div class="profile-pic">
-            <img src="Pictures/cat.png" alt="Profile">
+            <img title="Your pfp (great choice)" src="Pictures/cat.png" alt="Profile">
         </div>
     </div>
 
@@ -33,19 +33,29 @@
             <!-- TODAY SECTION -->
             <div id="Today">
                 <div class="mailListTitles"><h3>Today</h3></div>
-
+                
                 <!----------------------------------------------------->
-                <div data-mail-id="1" reader-mail-id="yourGameDownloader" class="mailItem unread" title="There is a new game! Intrested? Click HERE to download!">
+                <div data-mail-id="1" reader-mail-id="yourGameDownloader" class="mailItem unread" title="Hey adventurer! Tired of the same old games? UPLOADED is a great new experience!">
                     <div class="mailHeader">
                         <p class="sender">yourGameDownloader</p>
                         <span class="time">11:47 AM</span>
                     </div>
                     <p class="subject">New game alert!</p>
-                    <p class="preview">There is a new game! Intrested? Click HERE to download!</p>
+                    <p class="preview">Hey adventurer! Tired of the same old games? UPLOADED is a great new experience!</p>
                 </div>
 
                 <!----------------------------------------------------->
-                <div data-mail-id="2" reader-mail-id="GitHub"class="mailItem unread" title="We detected a potential issue in your latest commit...">
+                <div data-mail-id="2" reader-mail-id="anonymous" class="mailItem unread" title="Hey emm I would like to apoligies for what I said earlier in a mail">
+                    <div class="mailHeader">
+                        <p class="sender">anonymous</p>
+                        <span class="time">11:34 AM</span>
+                    </div>
+                    <p class="subject">sorry</p>
+                    <p class="preview">Hey emm I would like to apoligies for what I said earlier in a mail</p>
+                </div>
+
+                <!----------------------------------------------------->
+                <div data-mail-id="3" reader-mail-id="GitHub"class="mailItem unread" title="We detected a potential issue in your latest commit...">
                     <div class="mailHeader">
                         <p class="sender">GitHub</p>
                         <span class="time">10:42 AM</span>
@@ -55,10 +65,10 @@
                 </div>
 
                 <!----------------------------------------------------->
-                <div data-mail-id="3" reader-mail-id="Alex Rivera" class="mailItem" title="Hey, I took a look at the layout changes and they look great!">
+                <div data-mail-id="4" reader-mail-id="Jhomes Caspers" class="mailItem" title="Hey, I took a look at the layout changes and they look great!">
                     <div class="mailHeader">
-                        <p class="sender">Alex Rivera</p>
-                        <span class="time">8:15 AM</span>
+                        <p class="sender">Jhomes Caspers</p>
+                        <span class="time">1:15 AM</span>
                     </div>
                     <p class="subject">Project Update & Notes</p>
                     <p class="preview">Hey, I took a look at the layout changes and they look great!</p>
@@ -68,9 +78,27 @@
             <!-- YESTERDAY SECTION -->
             <div id="Yesterday">
                 <div class="mailListTitles"><h3>Yesterday</h3></div>
-                
+                <!------------------------------------------------------>
+
+                <div data-mail-id="5" reader-mail-id="FREE_MONEY.MONEY" class="mailItem unread" title="CONGRATULATIONS 🎉🎉🎉🎉🎉🎉🎉🎉! YOU WON THE LOTTERY 💰💰💰💰💰💰💰💰!!!">
+                    <div class="mailHeader">
+                        <p class="sender">FREE_MONEY.MONEY</p>
+                        <span class="time">11:59 PM</span>
+                    </div>
+                    <p class="subject">YOU WON THE LOTTERY 🎉🎉🎉🎉</p>
+                    <p class="preview">CONGRATULATIONS 🎉🎉🎉🎉🎉🎉🎉🎉! YOU WON THE LOTTERY 💰💰💰💰💰💰💰💰 !!!</p>
+                </div>
+                <!------------------------------------------------------>
+                <div data-mail-id="6" reader-mail-id="dog" class="mailItem" title="woof woof woof woof woof woof woof woof woof woof woof woof woof woof">
+                    <div class="mailHeader">
+                        <p class="sender">dog</p>
+                        <span class="time">5:55 PM</span>
+                    </div >
+                    <p class="subject">dog</p>
+                    <p class="preview">woof woof woof woof woof woof woof woof woof woof woof woof woof woof</p>
+                </div>
                 <!----------------------------------------------------->
-                <div data-mail-id="4" reader-mail-id="Support Team" class="mailItem unread" title="Thank you for reaching out. We have resolved the issue...">
+                <div data-mail-id="7" reader-mail-id="Support Team" class="mailItem unread" title="Thank you for reaching out. We have resolved the issue...">
                     <div class="mailHeader">
                         <p class="sender">Support Team</p>
                         <span class="time">4:30 PM</span>
@@ -140,5 +168,19 @@
             <div></div>
         </div>
     </div>
+
+
+    <!--TEMPLATE-->
+    <!--
+    <div data-mail-id="" reader-mail-id="" class="" title="">
+        <div class="">
+            <p class="sender"></p>
+            <span class="time"></span>
+        </div >
+        <p class="subject"></p>
+        <p class="preview"></p>
+    </div>
+
+    -->
 </body>
 </html>

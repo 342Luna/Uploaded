@@ -138,13 +138,19 @@ body {
     background-color: #f7faff;
 }
 
+.mailItem.unread:hover {
+    background-color: #e2ebf6;
+}
+
 .mailHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4px;
 }
-
+.bodyMail img {
+    height: 250px;
+}
 .sender {
     font-size: 14px;
     color: #202124;

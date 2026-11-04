@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading Game Files...</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="loadingscreen.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-mono min-h-screen flex items-center justify-center p-4 overflow-hidden select-none">
+
+    <!-- Glitch Overlay Layers for Visual FX -->
+    <div id="glitch-overlay" class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-200">
+        <div class="glitch-layer layer-1"></div>
+        <div class="glitch-layer layer-2"></div>
+    </div>
+
+    <!-- MAIN APP CONTAINER -->
+    <main id="app-container" class="w-full max-w-lg relative z-10 transition-all duration-300">
+        
+        <!-- DOWNLOAD SCREEN -->
+        <div id="download-card" class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-md relative overflow-hidden">
+            <!-- Decorative Ambient Glow -->
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Header Info -->
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="p-3 bg-cyan-500/10 border border-cyan-500/30 rounded-xl text-cyan-400 flex-shrink-0">
+                    <svg id="download-icon" class="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    <svg id="complete-icon" class="w-8 h-8 hidden text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                        Downloading Game Files
+                        <span id="badge" class="text-xs font-normal px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">In Progress</span>
+                    </h1>
+                    <p id="sub-status" class="text-xs text-slate-400 mt-0.5">Fetching package components...</p>
+                </div>
+            </div>
+
+            <!-- Progress Bar Section -->
+            <div class="space-y-2 mb-6">
+                <div class="flex justify-between text-sm">
+                    <span id="status-text" class="text-slate-300 font-medium">Downloading...</span>
+                    <span id="percentage" class="text-cyan-400 font-bold">0%</span>
+                </div>
+                
+                <!-- Custom Progress Bar -->
+                <div class="w-full bg-slate-950 border border-slate-800 h-4 rounded-full p-0.5 overflow-hidden relative">
+                    <div id="progress-fill" class="h-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 rounded-full w-0 transition-all duration-300 ease-out relative">
+                        <div class="absolute inset-0 bg-white/20 animate-[shimmer_2s_infinite]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Statistics -->
+            <div id="stats-panel" class="grid grid-cols-3 gap-2 p-3 bg-slate-950/60 border border-slate-800/80 rounded-xl text-xs text-slate-400 mb-6">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-wider text-slate-500">Speed</span>
+                    <span id="stat-speed" class="font-semibold text-slate-200 mt-0.5">0 MB/s</span>
+                </div>
+                <div class="flex flex-col border-x border-slate-800/80 px-2">
+                    <span class="text-[10px] uppercase tracking-wider text-slate-500">Downloaded</span>
+                    <span id="stat-size" class="font-semibold text-slate-200 mt-0.5">0 / 450 MB</span>
+                </div>
+                <div class="flex flex-col pl-1">
+                    <span class="text-[10px] uppercase tracking-wider text-slate-500">Time Left</span>
+                    <span id="stat-time" class="font-semibold text-slate-200 mt-0.5">Calculating...</span>
+                </div>
+            </div>
+
+            <!-- Action Area / Buttons -->
+            <div class="mt-4">
+                <button id="continue-btn" disabled class="w-full py-3.5 px-6 bg-slate-800 text-slate-500 font-bold rounded-xl transition-all duration-300 cursor-not-allowed opacity-50 flex items-center justify-center space-x-2">
+                    <span>Downloading...</span>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="loadingscreen.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Developer - Weekly Round-up</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Classic Newspaper Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        newsBg: '#fbf9f5',
+                        newsInk: '#1a1817',
+                        newsBorder: '#2d2a26',
+                        newsMuted: '#6b655f'
+                    },
+                    fontFamily: {
+                        header: ['"Cinzel"', 'serif'],
+                        serifHeadline: ['"Playfair Display"', 'serif'],
+                        bodySerif: ['"Source Serif 4"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Newspaper Texture and Styles */
+        body {
+            background-color: #f4efe6;
+            background-image: radial-gradient(#e2d9ca 1px, transparent 0);
+            background-size: 24px 24px;
+            color: #1a1817;
+            font-family: 'Source Serif 4', Georgia, serif;
+        }
+
+        .newspaper-container {
+            background-color: #fbf9f5;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Non-clickable elements rule */
+        .unclickable {
+            pointer-events: none;
+            user-select: none;
+        }
+
+        /* Newspaper Column Divider */
+        .column-divider {
+            border-right: 1px solid #dcd5c9;
+        }
+
+        /* Double border utility */
+        .border-double-custom {
+            border-style: double;
+            border-width: 4px;
+            border-color: #1a1817;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-6 px-3 sm:px-6 md:py-10 flex justify-center items-start">
+    <!-- THIS WAS MADE BY AI CUZ I WAS 2 LAZY TO MAKE IT MYSELF :D I DIDNT WANT IT TO BE JUST A PICTURE LIKE THE GITHUß EASTEREGG -->
+
+    <!-- Main Newspaper Page (Single Page View) -->
+    <div class="newspaper-container relative w-full max-w-4xl p-6 md:p-10 border border-newsBorder/20 rounded-sm">
+        
+        
+
+        <!-- NON-CLICKABLE TOP BAR -->
+        <header class="unclickable border-b-2 border-newsInk pb-4 mb-6">
+            <!-- Utility Info Bar -->
+            <div class="flex justify-between items-center text-xs font-mono uppercase tracking-widest text-newsMuted border-b border-newsBorder/30 pb-2 mb-4">
+                <span>Vol. LXIV No. 42</span>
+                <span class="font-bold text-newsInk">The Developer Gazette</span>
+                <span>Friday Edition • Special Issue</span>
+            </div>
+
+            <!-- Newspaper Title Header -->
+            <div class="text-center py-2">
+                <h1 class="font-header text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-newsInk leading-none">
+                    The Daily Dev
+                </h1>
+                <p class="font-serifHeadline italic text-sm sm:text-base text-newsMuted mt-2">
+                    "All the Code That's Fit to Print"
+                </p>
+            </div>
+
+            <!-- Non-clickable Category Bar -->
+            <div class="mt-4 pt-2 border-t-2 border-b border-newsInk flex justify-around items-center text-xs sm:text-sm font-semibold tracking-wider uppercase font-header py-1.5 text-newsInk/80">
+                <span>Frontend</span>
+                <span>•</span>
+                <span>Backend</span>
+                <span>•</span>
+                <span>AI & Tooling</span>
+                <span>•</span>
+                <span>Architecture</span>
+                <span>•</span>
+                <span>DevOps</span>
+            </div>
+        </header>
+
+        <!-- MAIN SUB-HEADER / BANNER -->
+        <section class="mb-8 text-center border-b-4 border-double-custom pb-6">
+            <span class="inline-block px-3 py-1 bg-newsInk text-newsBg text-xs font-mono uppercase tracking-widest font-bold mb-3">
+                Weekly Briefing
+            </span>
+            <h2 class="font-serifHeadline text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-newsInk">
+                Here is your weekly round-up of the best developer news.
+            </h2>
+            <p class="mt-3 text-sm sm:text-base text-newsMuted italic max-w-2xl mx-auto">
+                Curated insights, major framework updates, and architectural breakthroughs hand-picked for modern software engineers.
+            </p>
+        </section>
+
+        <!-- CONTENT GRID (3 COLUMNS ON DESKTOP) -->
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-8 text-justify leading-relaxed">
+            
+            <!-- Column 1: Lead Story -->
+            <article class="md:column-divider md:pr-6 space-y-4">
+                <div class="border-b border-newsBorder/30 pb-2">
+                    <span class="text-xs font-mono font-bold uppercase text-newsMuted">Main Story</span>
+                    <h3 class="font-serifHeadline text-xl font-bold leading-snug mt-1">
+                        Zero-Config Runtime Hits Major Milestone
+                    </h3>
+                </div>
+                <p class="text-sm first-letter:float-left first-letter:text-4xl first-letter:font-serifHeadline first-letter:font-bold first-letter:mr-2 first-letter:leading-none">
+                    Engineers around the globe are celebrating today as standard tooling converges on instant cold starts and native TypeScript execution without transpilation steps.
+                </p>
+                <p class="text-sm text-newsInk/90">
+                    Benchmarks indicate a 40% reduction in memory overhead for edge deployments, marking a turning point for lightweight service architectures.
+                </p>
+                <blockquote class="border-l-2 border-newsInk pl-3 my-4 italic text-xs text-newsMuted font-serifHeadline">
+                    "We stopped configuring tools and actually started shipping code again."
+                </blockquote>
+            </article>
+
+            <!-- Column 2: Tooling & Tech -->
+            <article class="md:column-divider md:pr-6 space-y-4">
+                <div class="border-b border-newsBorder/30 pb-2">
+                    <span class="text-xs font-mono font-bold uppercase text-newsMuted">Ecosystem Update</span>
+                    <h3 class="font-serifHeadline text-xl font-bold leading-snug mt-1">
+                        CSS Container Queries Become Standard Practice
+                    </h3>
+                </div>
+                <!-- Vintage SVG Illustration Placeholder -->
+                <div class="w-full bg-stone-200/60 p-4 border border-newsBorder/40 my-2 text-center rounded-sm">
+                    <svg class="w-12 h-12 mx-auto text-newsInk/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 4v16M15 4v16"></path>
+                    </svg>
+                    <span class="text-[10px] font-mono text-newsMuted uppercase tracking-wider block mt-2">Fig 1. Responsive Layout Paradigm</span>
+                </div>
+                <p class="text-sm text-newsInk/90">
+                    Media queries take a backseat as component-driven container responsiveness reaches 99% browser support. Designers and frontend leads report cleaner codebases and fewer layout hacks across major web applications.
+                </p>
+            </article>
+
+            <!-- Column 3: Quick Hits & Easter Egg Footer -->
+            <article class="space-y-4">
+                <div class="border-b border-newsBorder/30 pb-2">
+                    <span class="text-xs font-mono font-bold uppercase text-newsMuted">Short Reads</span>
+                    <h3 class="font-serifHeadline text-xl font-bold leading-snug mt-1">
+                        In Brief: AI Pair Programmers & Database Shifts
+                    </h3>
+                </div>
+
+                <ul class="space-y-3 text-sm divide-y divide-newsBorder/20">
+                    <li class="pt-2">
+                        <strong class="font-serifHeadline block text-sm">SQLite on the Edge</strong>
+                        <p class="text-xs text-newsMuted mt-0.5">Embedded databases continue to displace complex cluster setups for read-heavy micro-apps.</p>
+                    </li>
+                    <li class="pt-3">
+                        <strong class="font-serifHeadline block text-sm">Git Command Secrets</strong>
+                        <p class="text-xs text-newsMuted mt-0.5">Discover three underutilized flags that streamline interactive rebase workflows.</p>
+                    </li>
+                </ul>
+
+                <!-- Secret Easter Egg Note Box -->
+                <div class="mt-6 p-3 bg-amber-50/80 border border-amber-900/20 rounded-sm">
+                    <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-900 block mb-1">
+                        Secret Classified
+                    </span>
+                    <p class="text-xs text-amber-950/80 font-mono italic">
+                        You've reached the end of the printed wire! Take a coffee break, write clean functions, and have a great week ahead.
+                    </p>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- FOOTER (NON-CLICKABLE) -->
+        <footer class="unclickable border-t-2 border-newsInk mt-10 pt-4 text-center text-xs font-mono text-newsMuted">
+            <p>© The Daily Dev Weekly • Single Edition Easter Egg • Printed with Tailwind & Pure CSS</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
