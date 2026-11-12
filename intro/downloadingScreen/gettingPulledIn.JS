@@ -110,6 +110,8 @@ setTimeout(() => {
   fadeOverlay.classList.add('active');
 }, 3000);
 
+//random spawn
 function handleWakeUp() {
-  window.location.href = "../UploadedMain.html";
+  const randomspawn = Math.floor(Math.random() * 3)+1;
+  window.location.href = `../../firstLevel/startground/startground${randomspawn}/browser.html`;
 }
