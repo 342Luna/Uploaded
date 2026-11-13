@@ -113,5 +113,5 @@ setTimeout(() => {
 //random spawn
 function handleWakeUp() {
   const randomspawn = Math.floor(Math.random() * 3)+1;
-  window.location.href = `../../firstLevel/startground/startground${randomspawn}/browser.html`;
+  window.location.href = `../../firstLevel/startground/startground${randomspawn}/browser.php`;
 }

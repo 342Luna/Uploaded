@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOADED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="startpage.css">
+</head>
+<body class="min-h-screen w-full flex items-center justify-center p-6">
+
+    <!-- Main Centered Content Wrapper -->
+    <main class="ambient-container flex flex-col items-center justify-center text-center max-w-full">
+        
+        <!-- Game Title -->
+        <h1 id="gameTitle" 
+            class="text-black font-bold tracking-tighter select-none mb-8 sm:mb-10 text-5xl sm:text-7xl md:text-8xl leading-none">
+            UPLOADED
+        </h1>
+
+        <!-- Sleek Black Action Button -->
+        <button id="startButton" 
+                type="button"
+                aria-label="Start UPLOADED"
+                class="start-btn rounded-xl px-10 py-4 sm:px-14 sm:py-5 text-base sm:text-lg font-bold uppercase focus:outline-none focus:ring-4 focus:ring-black/20">
+            <span id="btnLabel" class="relative z-10">START</span>
+            <span class="btn-shimmer" aria-hidden="true"></span>
+            
+            <!-- Button-Scoped Multi-Layer Glitch Overlay -->
+            <span id="btn-glitch-overlay" aria-hidden="true">
+                <span class="glitch-layer"></span>
+                <span class="glitch-layer layer-1"></span>
+                <span class="glitch-layer layer-2"></span>
+            </span>
+        </button>
+
+    </main>
+
+    <!-- Custom Non-Blocking Feedback Toast (for preview environments where explain.HTML might not exist yet) -->
+    <div id="navToast" 
+         class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-zinc-900 text-white text-xs sm:text-sm font-mono px-4 py-2.5 rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+        Navigating to explain.HTML...
+    </div>
+
+    <script src="startpage.js"></script>
+</body>
+</html>
