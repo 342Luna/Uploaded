@@ -1,8 +1,9 @@
- const container = document.getElementById('content');
+const container = document.getElementById('content');
        const elements = Array.from(container.children);
        container.innerHTML = '';
 
-       const typingSpeed = 25;
+       const typingSpeed = 30;       // Default speed for p, h1, h3
+       const fastTypingSpeed = 2;    // Faster speed for pre (lower number = faster)
        let isTyping = true;
        let skipRequested = false;
 
@@ -45,7 +46,11 @@
                return;
            }
 
+           // Determine the speed based on whether the tag is a PRE
+           const currentSpeed = (el.tagName === 'PRE') ? fastTypingSpeed : typingSpeed;
+
            const clone = document.createElement(el.tagName);
+           // Copy any classes/attributes if needed, or just let it create the tag
            clone.classList.add('cursor');
            container.appendChild(clone);
 
@@ -64,7 +69,7 @@
                    currentHTML += fullHTML[i];
                    i++;
                    clone.innerHTML = currentHTML;
-                   await new Promise(resolve => setTimeout(resolve, typingSpeed));
+                   await new Promise(resolve => setTimeout(resolve, currentSpeed));
                }
            }
            
