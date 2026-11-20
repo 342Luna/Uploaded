@@ -1,0 +1,23 @@
+body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid white;
+        }
+        .cursor::after {
+            content: '█';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        #prompt-msg {
+            margin-top: 20px;
+            color: #aaa;
+        }

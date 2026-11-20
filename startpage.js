@@ -1,36 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
             const startBtn = document.getElementById('startButton');
             const btnLabel = document.getElementById('btnLabel');
-            const navToast = document.getElementById('navToast');
             
             let isTransitioning = false;
             const originalText = 'START';
             const glitchChars = '!<>-_\\/[]{}—=+*^?#01';
 
             function navigateToExplain(wasGlitched) {
-                navToast.classList.remove('opacity-0');
-
-                const isSandboxedPreview = window.location.protocol === 'about:' || 
-                                           window.location.protocol === 'blob:' || 
-                                           window.location.protocol === 'data:';
-
-                if (!isSandboxedPreview) {
-                    try {
-                        window.location.assign('explain.HTML');
-                    } catch (err) {
-                        navToast.textContent = 'Ready to load explain.HTML (Preview Mode)';
-                    }
-                } else {
-                    navToast.textContent = wasGlitched 
-                        ? 'Glitch triggered (20% roll)! → explain.HTML' 
-                        : 'Normal start (80% roll) → explain.HTML';
-                    
-                    setTimeout(() => {
-                        startBtn.classList.remove('glitching-active');
-                        btnLabel.textContent = originalText;
-                        isTransitioning = false;
-                    }, 400);
-                }
+                setTimeout(() => {
+                    window.location.href = 'explain.HTML';
+                }, wasGlitched ? 300 : 100); // slightly longer pause if it glitched so you can see it!
             }
 
             function handleStartClick() {
@@ -64,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }, 50);
 
-                    // Navigate after the 650ms button glitch sequence completes
+                    // after 650ms button-glitch sequence complete
                     setTimeout(() => {
                         navigateToExplain(true);
                     }, 650);

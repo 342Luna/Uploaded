@@ -1,4 +1,4 @@
-// data for uploading
+// Mail inside
 const mailData = {
   // today
   1: { subject: "New game alert!", body: 'Hey adventurer! Tired of the same old games? UPLOADED is a great new experience! <hr> UPLOADED is made to give you a truly UNFORGETTABLE experience. This game will drag you with it! The story is great and it\'s almost like you are truly there! there are fun bosses and cool powerups! You can customize your avatar and even learn some while playing the game!<br><br> ★★★★★ “The best game I\'ve EVER played!”<br>— Alex R. | Verified Player<br>UPLOADED is an absolutely incredible experience! The story is so immersive that it feels like you\'re actually part of the game. The boss fights are exciting, the power-ups are amazing, and the character customization is surprisingly detailed!<br>I even learned a few things while playing! I can\'t recommend this game enough. Everyone should download it immediately!<br>10/10 — Best decision of my life.<br><br>It\'s available NOW!👉 <a href="downloadingScreen/loadingscreen.html">click here</a> to start your adventure!<br><br>Don\'t miss out. Your journey is waiting.<br><br><i>Downloaded, installed, and reviewed by yourGameDownloader.</i>'},
@@ -20,7 +20,7 @@ const mailData = {
   15: { subject: "caspers", body: "Hi. I've send you the funny 3mail ideas through t3ams! Spelling mistakes are made on purpose 👍<br><br><i>@Jhomes Carspers</i>"}
 };
 
-// generate mailContents
+// generate divs to put info into
 const mailContents = {};
 
 for (const [id, data] of Object.entries(mailData)) {
@@ -42,7 +42,7 @@ let activeContentDiv = null;
 mailItems.forEach(item => {
     item.addEventListener("click", function() {
     
-    // 1. read when clicked (removes 'unread')
+    // 1. removes unread class
     if (this.classList.contains("unread")) {
         this.classList.remove("unread");
     }
