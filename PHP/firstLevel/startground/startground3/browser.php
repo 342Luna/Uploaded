@@ -33,7 +33,7 @@ $charState = $_SESSION['character'] ?? $defaultState;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uploaded</title>
-    <link rel="icon" type="image/x-icon" href="../../../intro/Pictures/groom.png">
+    <link rel="icon" type="image/x-icon" href="../../../../Pictures/borderIcon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -57,8 +57,8 @@ $charState = $_SESSION['character'] ?? $defaultState;
       <div class="flex items-end space-x-1 overflow-x-auto no-scrollbar">
         <div class="bg-white text-slate-800 px-4 py-2 rounded-t-xl text-xs sm:text-sm font-medium flex items-center space-x-2 shadow-sm min-w-[160px] sm:min-w-[200px] justify-between">
           <div class="flex items-center space-x-2 truncate">
-            <span class="w-4 h-4 rounded-full flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0"><img src="../../../intro/Pictures/groom.png" alt=""></span>
-            <span class="truncate">Groom &bull; New Tab</span>
+            <span class="w-4 h-4 rounded-full flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0"><img src="../../../../Pictures/borderIcon.png" alt=""></span>
+            <span class="truncate">Border &bull; New Tab</span>
           </div>
           <span class="text-slate-400 hover:text-slate-700 cursor-pointer rounded-full p-0.5">&times;</span>
         </div>
@@ -77,7 +77,7 @@ $charState = $_SESSION['character'] ?? $defaultState;
         <div class="flex items-center space-x-2 w-full">
           <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
           <span class="text-slate-400 hidden sm:inline">https://</span>
-          <input type="text" value="www.groom.com/" class="bg-transparent outline-none text-slate-700 w-full font-normal">
+          <input type="text" value="www.border.com/" class="bg-transparent outline-none text-slate-700 w-full font-normal">
         </div>
       </div>
     </div>
@@ -177,7 +177,7 @@ $charState = $_SESSION['character'] ?? $defaultState;
 
     <!-- ROUND FLOATING ACTION BUTTON WITH PEN ICON -->
     <button id="toggle-customizer-btn" aria-label="Toggle Character Customizer" aria-expanded="false" class="fixed bottom-6 right-6 z-40 w-16 h-16 rounded-full bg-white border-4 border-indigo-600 shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center overflow-hidden group focus:outline-none">
-      <img src="../../../intro/Pictures/pen.png" alt="Pen Icon" class="w-7 h-7 object-contain">
+      <img src="../../../../Pictures/pen.png" alt="Pen Icon" class="w-7 h-7 object-contain">
     </button>
   </div>
 

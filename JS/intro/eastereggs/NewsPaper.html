@@ -10,80 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        newsBg: '#fbf9f5',
-                        newsInk: '#1a1817',
-                        newsBorder: '#2d2a26',
-                        newsMuted: '#6b655f'
-                    },
-                    fontFamily: {
-                        header: ['"Cinzel"', 'serif'],
-                        serifHeadline: ['"Playfair Display"', 'serif'],
-                        bodySerif: ['"Source Serif 4"', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom Newspaper Texture and Styles */
-        body {
-            background-color: #f4efe6;
-            background-image: radial-gradient(#e2d9ca 1px, transparent 0);
-            background-size: 24px 24px;
-            color: #1a1817;
-            font-family: 'Source Serif 4', Georgia, serif;
-        }
-
-        .newspaper-container {
-            background-color: #fbf9f5;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Non-clickable elements rule */
-        .unclickable {
-            pointer-events: none;
-            user-select: none;
-        }
-
-        /* Newspaper Column Divider */
-        .column-divider {
-            border-right: 1px solid #dcd5c9;
-        }
-
-        /* Double border utility */
-        .border-double-custom {
-            border-style: double;
-            border-width: 4px;
-            border-color: #1a1817;
-        }
-    </style>
+    <link rel="stylesheet" href="eastereggs.css">
 </head>
 <body class="min-h-screen py-6 px-3 sm:px-6 md:py-10 flex justify-center items-start">
-    <!-- THIS WAS MADE BY AI CUZ I WAS 2 LAZY TO MAKE IT MYSELF :D I DIDNT WANT IT TO BE JUST A PICTURE LIKE THE GITHUß EASTEREGG -->
-
-    <!-- Main Newspaper Page (Single Page View) -->
+    <!-- Main div -->
     <div class="newspaper-container relative w-full max-w-4xl p-6 md:p-10 border border-newsBorder/20 rounded-sm">
-        
-        
 
-        <!-- NON-CLICKABLE TOP BAR -->
+        <!-- top bar -->
         <header class="unclickable border-b-2 border-newsInk pb-4 mb-6">
-            <!-- Utility Info Bar -->
+
+            <!-- info bar -->
             <div class="flex justify-between items-center text-xs font-mono uppercase tracking-widest text-newsMuted border-b border-newsBorder/30 pb-2 mb-4">
                 <span>Vol. LXIV No. 42</span>
                 <span class="font-bold text-newsInk">The Developer Gazette</span>
                 <span>Friday Edition • Special Issue</span>
             </div>
 
-            <!-- Newspaper Title Header -->
+            <!-- newspaper title header -->
             <div class="text-center py-2">
                 <h1 class="font-header text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-newsInk leading-none">
-                    The Daily Dev
+                    Weekly Newsletter
                 </h1>
                 <p class="font-serifHeadline italic text-sm sm:text-base text-newsMuted mt-2">
                     "All the Code That's Fit to Print"
@@ -96,7 +42,7 @@
                 <span>•</span>
                 <span>Backend</span>
                 <span>•</span>
-                <span>AI & Tooling</span>
+                <span>Tooling</span>
                 <span>•</span>
                 <span>Architecture</span>
                 <span>•</span>
@@ -104,7 +50,7 @@
             </div>
         </header>
 
-        <!-- MAIN SUB-HEADER / BANNER -->
+        <!-- tiles -->
         <section class="mb-8 text-center border-b-4 border-double-custom pb-6">
             <span class="inline-block px-3 py-1 bg-newsInk text-newsBg text-xs font-mono uppercase tracking-widest font-bold mb-3">
                 Weekly Briefing
@@ -117,10 +63,10 @@
             </p>
         </section>
 
-        <!-- CONTENT GRID (3 COLUMNS ON DESKTOP) -->
+        <!-- content -->
         <main class="grid grid-cols-1 md:grid-cols-3 gap-8 text-justify leading-relaxed">
             
-            <!-- Column 1: Lead Story -->
+            <!-- column 1 -->
             <article class="md:column-divider md:pr-6 space-y-4">
                 <div class="border-b border-newsBorder/30 pb-2">
                     <span class="text-xs font-mono font-bold uppercase text-newsMuted">Main Story</span>
@@ -139,7 +85,7 @@
                 </blockquote>
             </article>
 
-            <!-- Column 2: Tooling & Tech -->
+            <!-- column 2 -->
             <article class="md:column-divider md:pr-6 space-y-4">
                 <div class="border-b border-newsBorder/30 pb-2">
                     <span class="text-xs font-mono font-bold uppercase text-newsMuted">Ecosystem Update</span>
@@ -147,26 +93,20 @@
                         CSS Container Queries Become Standard Practice
                     </h3>
                 </div>
-                <!-- Vintage SVG Illustration Placeholder -->
                 <div class="w-full bg-stone-200/60 p-4 border border-newsBorder/40 my-2 text-center rounded-sm">
-                    <!-- <svg class="w-12 h-12 mx-auto text-newsInk/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 4v16M15 4v16"></path>
-                    </svg>
-                    <span class="text-[10px] font-mono text-newsMuted uppercase tracking-wider block mt-2">Fig 1. Responsive Layout Paradigm</span> -->
-                <img src="../Pictures/laptop.png" alt="laptop">
+               <img src="../../../Pictures/laptop.png" alt="laptop">
                 </div>
                 <p class="text-sm text-newsInk/90">
                     Media queries take a backseat as component-driven container responsiveness reaches 99% browser support. Designers and frontend leads report cleaner codebases and fewer layout hacks across major web applications.
                 </p>
             </article>
 
-            <!-- Column 3: Quick Hits & Easter Egg Footer -->
+            <!-- column 3 -->
             <article class="space-y-4">
                 <div class="border-b border-newsBorder/30 pb-2">
                     <span class="text-xs font-mono font-bold uppercase text-newsMuted">Short Reads</span>
                     <h3 class="font-serifHeadline text-xl font-bold leading-snug mt-1">
-                        In Brief: AI Pair Programmers & Database Shifts
+                        Database & Gits
                     </h3>
                 </div>
 
@@ -181,13 +121,13 @@
                     </li>
                 </ul>
 
-                <!-- Secret Easter Egg Note Box -->
+                <!-- easter egg notice -->
                 <div class="mt-6 p-3 bg-amber-50/80 border border-amber-900/20 rounded-sm">
                     <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-900 block mb-1">
                         Secret Classified
                     </span>
                     <p class="text-xs text-amber-950/80 font-mono italic">
-                        You've reached the end of the printed wire! Take a coffee break, write clean functions, and have a great week ahead.
+                    Congrats! You've found this little easter egg :] I hope you liked it! Feel free to ask for more content inside the newspaper. Enjoy your coffee and cya around!<br> <i>- EastereggNotifyer</i>
                     </p>
                 </div>
             </article>
@@ -200,6 +140,6 @@
         </footer>
 
     </div>
-
+<script src="eastereggs.js"></script>
 </body>
 </html>

@@ -2,22 +2,24 @@ const container = document.getElementById('content');
        const elements = Array.from(container.children);
        container.innerHTML = '';
 
-       const typingSpeed = 30;       // Default speed for p, h1, h3
-       const fastTypingSpeed = 2;    // Faster speed for pre (lower number = faster)
+       const typingSpeed = 30;      
+       const fastTypingSpeed = 2;    
        let isTyping = true;
        let skipRequested = false;
 
        // Listen for the Enter key
        document.addEventListener('keydown', (event) => {
-           if (event.key === 'Enter') {
+            if (event.key === 'Enter') {
                if (isTyping) {
                    // If still typing, trigger the skip
                    skipRequested = true;
-               } else {
-                   // If typing is already done, go to the next page
-                   window.location.href = 'Intro/UploadedMain.HTML';
                }
-           }
+            }
+            if (event.key === '1') {
+                window.location.href = 'PHP/Intro/UploadedMain.HTML';
+            } else if (event.key === '2') {
+                window.location.href = 'JS/Intro/UploadedMain.HTML';
+            }
        });
 
        function showFinalPrompt() {
@@ -25,11 +27,10 @@ const container = document.getElementById('content');
            // Remove any leftover cursors
            document.querySelectorAll('.cursor').forEach(el => el.classList.remove('cursor'));
            
-           // Add a prompt so the player knows to press Enter
            const promptEl = document.createElement('p');
            promptEl.id = 'prompt-msg';
            promptEl.classList.add('cursor');
-           promptEl.textContent = '[ Press ENTER to continue ]';
+           promptEl.textContent = '[ Press [1] to continue in PHP OR Press [2] to continue in JS ]';
            container.appendChild(promptEl);
        }
 

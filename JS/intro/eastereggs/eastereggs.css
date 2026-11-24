@@ -1,0 +1,39 @@
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../../Pictures/github.com.png');
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+  z-index: -1;               
+}
+
+body {
+    background-color: #94715087;
+    background-size: 24px 24px;
+    color: #1a1817;
+    font-family: 'Source Serif 4', Georgia, serif;
+}
+
+.newspaper-container {
+    background-color: #fbf9f5;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.408), 0 1px 4px rgba(0, 0, 0, 0.403);
+}
+
+.unclickable {
+    pointer-events: none;
+    user-select: none;
+}
+
+.column-divider {
+    border-right: 1px solid #dcd5c9;
+}
+
+.border-double-custom {
+    border-style: double;
+    border-width: 4px;
+    border-color: #1a1817;
+}
